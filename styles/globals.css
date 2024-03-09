@@ -1,0 +1,41 @@
+:root {
+  --shadow-1: 0px 0px 0px 0px rgba(0, 0, 0, 0.14),
+    0px 2.43px 5.832px 0px rgba(0, 0, 0, 0.13),
+    0px 10.693px 10.693px 0px rgba(0, 0, 0, 0.12),
+    0px 23.816px 14.581px 0px rgba(0, 0, 0, 0.07),
+    0px 42.772px 17.011px 0px rgba(0, 0, 0, 0.02),
+    0px 66.588px 18.47px 0px rgba(0, 0, 0, 0);
+}
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  font-family: "Open Sans", "Lato", sans-serif;
+  background-color: #d9d9d9;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
+  color: #2b2b2b;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.center {
+  margin: auto;
+  text-align: center;
+}
