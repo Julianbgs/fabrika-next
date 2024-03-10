@@ -52,6 +52,7 @@ const Slider = () => {
 
   return (
     <Wrapper>
+      <h1 className="title">Кафе Фабрика в Анапе</h1>
       <AnimatePresence mode="wait">
         <motion.div
           key={index}
@@ -75,18 +76,34 @@ const Slider = () => {
       <Button className="next" onClick={() => paginate(1)}>
         {">"}
       </Button>
+      <h2 className="sub-title">Меню и цены</h2>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
   position: relative;
-  width: 100%;
+  width: 1280px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
   margin-bottom: 30px;
+  
+  .title {
+    margin: 45px auto 25px;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: normal;
+  }
+  
+  .sub-title {
+    margin: 45px auto 25px;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: normal;
+  }
 `;
 
 const Button = styled.button`
