@@ -225,7 +225,7 @@ const Wrapper = styled.div`
   @media (min-width: 992px) {
     .anketa {
       flex-direction: row;
-      justify-content: space-evenly;
+      justify-content: space-between;
       width: 100%;
       /* margin: 0; */
     }

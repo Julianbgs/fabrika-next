@@ -28,13 +28,11 @@ const NextConfig = {
         Buffer: ["buffer", "Buffer"],
       })
     );
+
     return config;
   },
   compiler: {
     styledComponents: true,
-  },
-  images: {
-    unoptimized: true,
   },
 };
 
