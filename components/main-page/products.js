@@ -14,19 +14,19 @@ const Products = ({ products }) => {
   );
 };
 const Wrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
 
-  @media (min-width: 576px) {
-  }
-  @media (min-width: 768px) {
-  }
-  @media (min-width: 992px) {
-  }
-  @media (min-width: 1200px) {
-  }
-  @media (min-width: 1400px) {
-  }
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1400px) {
+}
 `;
 export default Products;

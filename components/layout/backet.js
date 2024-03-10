@@ -43,7 +43,7 @@ const Wrapper = styled.div`
   @media (min-width: 768px) {
   }
   @media (min-width: 992px) {
-    bottom: 300px;
+    // bottom: 300px;
   }
   @media (min-width: 1200px) {
   }

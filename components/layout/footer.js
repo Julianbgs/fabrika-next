@@ -3,9 +3,14 @@ import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import { SvgFooterLogo } from "../SvgComponents";
+import {useSelector} from "react-redux";
 
 const Footer = () => {
-  return (
+    const { isRestaurantModal, currentAddress, currentCategory } = useSelector(
+        (store) => store.user
+    );
+    console.log(currentAddress);
+    return (
     <Wrapper>
       <Link href="/" className="logo">
         <SvgFooterLogo />
@@ -33,6 +38,14 @@ const Footer = () => {
         </Link>
       </div>
       <div className="contacts">
+        {currentAddress.address === 'Первомайская 39' &&
+        <iframe className="rating" src="https://yandex.ru/sprav/widget/rating-badge/2303086933?type=rating" width="150" height="50"
+                frameBorder="0"/>
+        }
+        {currentAddress.address === 'Кордонный переулок 1И' &&
+        <iframe className="rating" src="https://yandex.ru/sprav/widget/rating-badge/139072557633?type=rating" width="150" height="50"
+                frameBorder="0"/>
+        }
         <div className="address">Первомайская 39</div>
         <div className="phone">8 (928) 841 11 71</div>
         <div className="address">Переулок Кордонный 1И</div>
@@ -56,6 +69,9 @@ const Wrapper = styled.div`
     display: none;
   }
   .contacts {
+    display: none;
+  }
+  .rating {
     display: none;
   }
   .menu {
@@ -117,9 +133,16 @@ const Wrapper = styled.div`
       }
     }
     .contacts {
+      position: relative;
       display: flex;
       flex-direction: column;
       color: white;
+      .rating {
+        position: absolute;
+        bottom: 0;
+        left: -180px;
+        display: block;
+      }
       .address {
         margin: 10px;
         font-size: 14px;
@@ -133,6 +156,7 @@ const Wrapper = styled.div`
       display: none;
     }
     .menu2 {
+      position: relative;
       display: flex;
       flex-direction: column;
       .item {
